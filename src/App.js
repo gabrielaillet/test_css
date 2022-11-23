@@ -13,25 +13,26 @@ function App() {
       "#f4a261",
       "#e76f51",
     ],
-    [
-      "#f0ead2",
-      "#dde5b6",
-      "#adc178",
-      "#7b8f4b",
-      "#a98467",
-      "#6c584c",
-      "#79675c",
-    ],
+  
     [      
-    "#5a6776",
-    "#766a76",
-    "#916e75",
-    "#ad7175",
-    "#c87475",
-    "#e47874",
-    "#ff7b74",]
+    "#f94144",
+    "#f3722c",
+    "#f8961e",
+    "#f9c74f",
+    "#90be6d",
+    "#43aa8b",
+    "#577590"],
+    [      
+      "#f94144",
+      "#f3722c",
+      "#f8961e",
+      "#f9c74f",
+      "#90be6d",
+      "#43aa8b",
+      "#577590"]
+    
   ];
-  const roundness = ["0%", "5%", "30", "50%"];
+  const roundness = ["0%", "5%","20%" ,"40%","30%", "50%"];
   
   let rdnindex = 0;
   setInterval(() => {
@@ -55,7 +56,7 @@ function App() {
 
     while (indexa.length > 0) {
       if (i === 0) {
-        left = Math.floor(Math.random() * 20) + 45;
+        left = Math.floor(Math.random() * 40) + 45;
         top = 0;
         height = 100;
         width = 100 - left;
@@ -87,7 +88,11 @@ function App() {
           }
         } else {
           top = Math.floor(Math.random() * 90);
-          left = top / 1.618;
+          if(top < 10){
+            top = 0;
+          }
+
+          left = Math.floor(Math.random() * 90);
           console.log();
           height = Math.max(
             Math.min(Math.floor(Math.random() * (101 - top)), 40),
